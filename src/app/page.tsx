@@ -19,7 +19,7 @@ export default async function Home({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   const resolvedParams = await searchParams;
-  const projectSlug = (typeof resolvedParams.project === "string" ? resolvedParams.project : "woodstock-laundry-ss25");
+  const projectSlug = (typeof resolvedParams.project === "string" ? resolvedParams.project : "woodstock-laundry-ss26");
   
   const images = PROJECTS[projectSlug] || [];
 

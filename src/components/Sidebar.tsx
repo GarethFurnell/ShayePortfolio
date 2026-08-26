@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 const PROJECTS = [
-  { name: "Woodstock Laundry SS25", slug: "woodstock-laundry-ss25" },
   { name: "Woodstock Laundry SS26", slug: "woodstock-laundry-ss26" },
+  { name: "Woodstock Laundry SS25", slug: "woodstock-laundry-ss25" },
 ];
 
 export default function Sidebar() {
   const searchParams = useSearchParams();
-  const currentProject = searchParams.get("project") || "woodstock-laundry-ss25";
+  const currentProject = searchParams.get("project") || "woodstock-laundry-ss26";
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 md:w-80 flex flex-col justify-between p-8 md:p-12 border-r border-gray-100 bg-white z-50">
@@ -41,7 +41,7 @@ export default function Sidebar() {
             );
           })}
           
-          <span className="text-xs text-gray-300 italic cursor-not-allowed">
+          <span className="text-xs text-gray-300 italic cursor-not-allowed pt-2">
             coming soon...
           </span>
         </nav>
