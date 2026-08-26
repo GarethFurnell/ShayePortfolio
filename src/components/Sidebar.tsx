@@ -4,20 +4,13 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
 const PROJECTS = [
-  { name: "Soft Focus", slug: "soft-focus" },
-  { name: "Slow Drift", slug: "slow-drift" },
-  { name: "Studio Wall Cast", slug: "studio-wall-cast" },
-  { name: "Shadows", slug: "shadows" },
-  { name: "Three Brides", slug: "three-brides" },
-  { name: "Picture Catalogue", slug: "picture-catalogue" },
-  { name: "Glass Slide", slug: "glass-slide" },
-  { name: "Compositions", slug: "compositions" },
-  { name: "Glass Insulators", slug: "glass-insulators" },
+  { name: "Woodstock Laundry SS25", slug: "woodstock-laundry-ss25" },
+  { name: "Woodstock Laundry SS26", slug: "woodstock-laundry-ss26" },
 ];
 
 export default function Sidebar() {
   const searchParams = useSearchParams();
-  const currentProject = searchParams.get("project") || "soft-focus";
+  const currentProject = searchParams.get("project") || "woodstock-laundry-ss25";
 
   return (
     <aside className="fixed left-0 top-0 h-screen w-64 md:w-80 flex flex-col justify-between p-8 md:p-12 border-r border-gray-100 bg-white z-50">
@@ -47,6 +40,10 @@ export default function Sidebar() {
               </Link>
             );
           })}
+          
+          <span className="text-xs text-gray-300 italic cursor-not-allowed">
+            coming soon...
+          </span>
         </nav>
       </div>
       

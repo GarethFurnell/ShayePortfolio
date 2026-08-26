@@ -1,10 +1,16 @@
 import AnimatedImage from "@/components/AnimatedImage";
 
 const PROJECTS: Record<string, string[]> = {
-  "soft-focus": ["/images/000014.JPG", "/images/000018.JPG", "/images/000019.JPG"],
-  "slow-drift": ["/images/000022.JPG", "/images/000028 2.JPG", "/images/000028.JPG"],
-  "studio-wall-cast": ["/images/000032.JPG", "/images/000033.JPG", "/images/000034.JPG"],
-  "shadows": ["/images/000037.JPG"],
+  "woodstock-laundry-ss25": [
+    "/images/ss25/0dd2a2252965533.6a5cd12e96e46.jpg",
+    "/images/ss25/1988d5252965533.6a5cd129f1c93.jpg",
+    "/images/ss25/ba6b5d252965533.6a5cd12920e7d.jpg"
+  ],
+  "woodstock-laundry-ss26": [
+    "/images/ss26/2a534e252947577.6a5c0b1e03402.jpg",
+    "/images/ss26/7ec4aa252947577.6a5c0b1d50bb7.jpg",
+    "/images/ss26/ee450c252947577.6a5c0b20e6047.jpg"
+  ],
 };
 
 export default async function Home({
@@ -13,7 +19,7 @@ export default async function Home({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   const resolvedParams = await searchParams;
-  const projectSlug = (typeof resolvedParams.project === "string" ? resolvedParams.project : "soft-focus");
+  const projectSlug = (typeof resolvedParams.project === "string" ? resolvedParams.project : "woodstock-laundry-ss25");
   
   const images = PROJECTS[projectSlug] || [];
 
