@@ -18,7 +18,7 @@ body {
 @keyframes slideDownFade {
   0% {
     opacity: 0;
-    transform: translateY(-60px);
+    transform: translateY(-80px);
   }
   100% {
     opacity: 1;
@@ -27,6 +27,5 @@ body {
 }
 
 .animate-slide-down {
-  animation: slideDownFade 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  opacity: 0; /* Starts hidden, animation makes it visible */
+  animation: slideDownFade 2.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

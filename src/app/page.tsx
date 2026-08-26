@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import AnimatedImage from "@/components/AnimatedImage";
 
 const PROJECTS: Record<string, string[]> = {
   "soft-focus": ["/images/000014.JPG", "/images/000018.JPG", "/images/000019.JPG"],
@@ -26,19 +25,12 @@ export default async function Home({
             key={`${projectSlug}-${index}`} 
             className="w-full min-h-screen flex items-center justify-center py-20 px-8"
           >
-            <div 
-              className="relative w-full max-w-5xl animate-slide-down"
-              style={{ animationDelay: `${index * 0.3}s` }}
-            >
-              <Image 
-                src={src} 
-                alt={`Project image ${index + 1}`}
-                width={1600}
-                height={1200}
-                className="w-full h-auto object-contain shadow-sm bg-gray-50"
-                priority={true}
-              />
-            </div>
+            <AnimatedImage 
+              src={src} 
+              alt={`Project image ${index + 1}`}
+              delay={index * 0.4} 
+              priority={true}
+            />
           </section>
         ))
       ) : (
