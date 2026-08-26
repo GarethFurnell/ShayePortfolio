@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PROJECTS: Record<string, string[]> = {
-  "soft-focus": ["/000014.JPG", "/000018.JPG", "/000019.JPG"],
-  "slow-drift": ["/000022.JPG", "/000028 2.JPG", "/000028.JPG"],
-  "studio-wall-cast": ["/000032.JPG", "/000033.JPG", "/000034.JPG"],
-  "shadows": ["/000037.JPG"],
+  "soft-focus": ["/images/000014.JPG", "/images/000018.JPG", "/images/000019.JPG"],
+  "slow-drift": ["/images/000022.JPG", "/images/000028 2.JPG", "/images/000028.JPG"],
+  "studio-wall-cast": ["/images/000032.JPG", "/images/000033.JPG", "/images/000034.JPG"],
+  "shadows": ["/images/000037.JPG"],
 };
 
 export default async function Home({
@@ -28,7 +28,7 @@ export default async function Home({
           >
             <div 
               className="relative w-full max-w-5xl animate-slide-down"
-              style={{ animationDelay: `${index * 0.15}s` }}
+              style={{ animationDelay: `${index * 0.3}s` }}
             >
               <Image 
                 src={src} 
@@ -36,7 +36,7 @@ export default async function Home({
                 width={1600}
                 height={1200}
                 className="w-full h-auto object-contain shadow-sm bg-gray-50"
-                priority={index === 0}
+                priority={true}
               />
             </div>
           </section>
