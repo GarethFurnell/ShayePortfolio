@@ -13,8 +13,8 @@ export default function Sidebar() {
   const currentProject = searchParams.get("project") || "woodstock-laundry-ss26";
 
   return (
-    <aside className="fixed left-0 top-0 h-screen w-64 md:w-80 flex flex-col justify-between p-8 md:p-12 border-r border-gray-100 bg-white z-50">
-      <div>
+    <aside className="relative w-full h-auto flex flex-col border-b border-gray-100 bg-white z-50 p-6 md:fixed md:left-0 md:top-0 md:h-screen md:w-72 md:justify-between md:p-10 md:border-r md:border-b-0">
+      <div className="mb-8 md:mb-0">
         <h1 className="text-sm font-semibold tracking-[0.2em] uppercase mb-4 text-black">
           Film By Shaye
         </h1>
@@ -46,7 +46,7 @@ export default function Sidebar() {
         </nav>
       </div>
       
-      <div className="flex flex-col space-y-8 mt-12">
+      <div className="flex flex-col space-y-8 mt-4 md:mt-12">
         <div className="flex flex-col space-y-2">
           <a href="#" className="text-xs text-black hover:text-gray-500 transition-colors">CV</a>
           <a href="#" className="text-xs text-black hover:text-gray-500 transition-colors">Contact</a>
